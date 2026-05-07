@@ -2,6 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Hambúrguer ─────────────────────────────────────────
+  const hamburger = document.querySelector('.hamburger');
+  const navDropdown = document.querySelector('.nav-dropdown');
+  const navActiveLabel = document.querySelector('.nav-active-label');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = navDropdown.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Fecha ao clicar fora
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.menu-nav')) {
+      navDropdown?.classList.remove('open');
+      hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   // ── Navbar tab switching ───────────────────────────────
   const navBtns = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.menu-section');
@@ -15,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn.classList.add('active');
       document.getElementById(target).classList.add('active');
+
+      // Atualiza label e fecha dropdown no mobile
+      if (navActiveLabel) navActiveLabel.textContent = btn.textContent;
+      navDropdown?.classList.remove('open');
+      hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
