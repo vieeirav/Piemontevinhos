@@ -1,28 +1,30 @@
-// ── Carta de Vinhos – interações ──────────────────────────
+// ── Carta Piemonte – interações ───────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Hambúrguer ─────────────────────────────────────────
+  // ── Navbar (hambúrguer no mobile) ──────────────────────
   const hamburger = document.querySelector('.hamburger');
-  const navDropdown = document.querySelector('.nav-dropdown');
-  const navActiveLabel = document.querySelector('.nav-active-label');
+  const navTabs = document.querySelector('.nav-tabs');
 
-  hamburger?.addEventListener('click', () => {
-    const isOpen = navDropdown.classList.toggle('open');
+  const closeMenu = () => {
+    navTabs?.classList.remove('open');
+    hamburger?.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+  };
+
+  hamburger?.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = navTabs.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
   });
 
   // Fecha ao clicar fora
   document.addEventListener('click', e => {
-    if (!e.target.closest('.menu-nav')) {
-      navDropdown?.classList.remove('open');
-      hamburger?.classList.remove('open');
-      hamburger?.setAttribute('aria-expanded', 'false');
-    }
+    if (!e.target.closest('.menu-nav')) closeMenu();
   });
 
-  // ── Navbar tab switching ───────────────────────────────
+  // ── Troca de seção ─────────────────────────────────────
   const navBtns = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.menu-section');
 
@@ -34,19 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
       sections.forEach(s => s.classList.remove('active'));
 
       btn.classList.add('active');
-      document.getElementById(target).classList.add('active');
+      const section = document.getElementById(target);
+      section.classList.add('active');
 
-      // Atualiza label e fecha dropdown no mobile
-      if (navActiveLabel) navActiveLabel.textContent = btn.textContent;
-      navDropdown?.classList.remove('open');
-      hamburger?.classList.remove('open');
-      hamburger?.setAttribute('aria-expanded', 'false');
+      // garante que as páginas da seção recém-exibida apareçam
+      section.querySelectorAll('.page').forEach(p => p.classList.add('visible'));
 
+      closeMenu();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
-  // ── Day selector (Refeições) ──────────────────────────
+  // ── Troca de dia (Refeições) ───────────────────────────
   const dayBtns = document.querySelectorAll('.day-btn');
   const dayPages = document.querySelectorAll('.day-page');
 
@@ -58,18 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
       dayPages.forEach(p => p.classList.remove('active'));
 
       btn.classList.add('active');
-      document.getElementById(`day-${day}`).classList.add('active');
+      document.getElementById(`day-${day}`).classList.add('active', 'visible');
+
+      // mantém o dia ativo centralizado na faixa
+      btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
     });
   });
 
-  // ── Highlight wine items on click ─────────────────────
+  // ── Destaque de item ao tocar ──────────────────────────
   document.querySelectorAll('.wine-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('selected');
-    });
+    item.addEventListener('click', () => item.classList.toggle('selected'));
   });
 
-  // ── Entrance animation ────────────────────────────────
+  // ── Animação de entrada ────────────────────────────────
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.08 }
   );
 
   document.querySelectorAll('.page').forEach(page => {
