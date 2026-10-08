@@ -1,373 +1,433 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta de Vinhos – Piemonte</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio · Restaurante Piemonte</title>
+  <meta name="description" content="Cardápio do Restaurante Piemonte em Santa Felicidade, Curitiba: carta de vinhos, sopas, menu do dia e bebidas.">
+  <meta name="theme-color" content="#F4F1EA">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav class="menu-nav">
-    <div class="nav-inner">
-      <img src="logo-piemonte.png" alt="Piemonte" class="nav-brand" />
-      <div class="nav-tabs">
-        <button class="nav-btn active" data-section="vinhos">Vinhos</button>
-        <button class="nav-btn" data-section="sopas">Sopas</button>
-        <button class="nav-btn" data-section="refeicoes">Refeições</button>
-        <button class="nav-btn" data-section="bebidas">Bebidas</button>
+  <!-- ============ BARRA SUPERIOR ============ -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <h1 class="sr-only">Cardápio do Restaurante Piemonte</h1>
+      <img class="topbar__logo" src="logo-piemonte.webp" width="301" height="240" alt="Restaurante Piemonte — Carne e Massas">
+      <nav class="tabs" role="tablist" aria-label="Seções do cardápio">
+      <button class="tab is-active" type="button" role="tab" id="tab-vinhos" aria-selected="true" aria-controls="vinhos" data-section="vinhos">Vinhos</button>
+      <button class="tab" type="button" role="tab" id="tab-sopas" aria-selected="false" aria-controls="sopas" data-section="sopas">Sopas</button>
+      <button class="tab" type="button" role="tab" id="tab-refeicoes" aria-selected="false" aria-controls="refeicoes" data-section="refeicoes">Refeições</button>
+      <button class="tab" type="button" role="tab" id="tab-bebidas" aria-selected="false" aria-controls="bebidas" data-section="bebidas">Bebidas</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ VINHOS ============ -->
+    <section class="menu-section is-active" id="vinhos" role="tabpanel" aria-labelledby="tab-vinhos">
+      <header class="section-head">
+        <p class="eyebrow">
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+          La Carta dei Vini
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+        </p>
+        <h2 class="section-title">Carta de <em>Vinhos</em></h2>
+      </header>
+
+      <div class="menu-card">
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <span class="swatch swatch--branco" aria-hidden="true"></span>
+            <h3 class="category__title">Vinhos Brancos</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Granja do Vale Moscato Giallo</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;35,00</span>
+              </div>
+              <p class="item__meta">750 ml · Brasil</p>
+              <p class="item__desc">Cor amarelo claro. Aromas tropicais e florais. Paladar suave, doce e refrescante.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Reservado Chardonnay</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;50,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor amarelo brilhante. Aromas de maçã, pera e pêssego com leve toque mineral. Paladar equilibrado, com acidez agradável e final mineral.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Reservado Sauv. Blanc / P. Jiménez</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;50,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor amarelo com reflexos esverdeados. Aromas cítricos. Paladar fresco, leve e equilibrado.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <span class="swatch swatch--espumante" aria-hidden="true"></span>
+            <h3 class="category__title">Espumantes</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Da Granja Moscatel</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;45,00</span>
+              </div>
+              <p class="item__meta">750 ml · Brasil</p>
+              <p class="item__desc">Aromas florais e frutados. Paladar leve, doce e equilibrado, com final refrescante.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">San Martin Moscatel</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;45,00</span>
+              </div>
+              <p class="item__meta">750 ml · Brasil</p>
+              <p class="item__desc">Aromas intensos de uvas frescas e flores brancas. Paladar adocicado, leve e agradável.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Salton Poética Demi-Sec</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;54,00</span>
+              </div>
+              <p class="item__meta">750 ml · Brasil</p>
+              <p class="item__desc">Cor amarelo palha com reflexos esverdeados. Aromas de frutas de polpa com notas cítricas. Paladar cremoso, suave e refrescante.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Lambrusco Del la Emília Branco</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;72,00</span>
+              </div>
+              <p class="item__meta">750 ml · Itália</p>
+              <p class="item__desc">Cor amarelo claro. Aromas frutados delicados. Paladar leve, levemente doce e refrescante.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Lambrusco Del la Emília Tinto</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;72,00</span>
+              </div>
+              <p class="item__meta">750 ml · Itália</p>
+              <p class="item__desc">Cor vermelho rubi. Aromas de frutas silvestres com toques florais. Paladar adocicado, equilibrado por uma acidez agradável.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <span class="swatch swatch--tinto" aria-hidden="true"></span>
+            <h3 class="category__title">Vinhos Tintos</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Granja do Vale Tannat</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;36,00</span>
+              </div>
+              <p class="item__meta">750 ml · Brasil</p>
+              <p class="item__desc">Cor rubi escura. Aromas de frutas negras maduras. Paladar encorpado, com taninos presentes e final persistente.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Cabernet Reservado C. y Toro</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;50,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor rubi com reflexos violáceos. Aromas de frutas vermelhas frescas. Paladar macio, com taninos suaves.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Carménère Reservado C. y Toro</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;50,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor rubi intensa. Aromas de frutas vermelhas maduras com notas de pimenta e tosta. Paladar com taninos suaves e boa persistência.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Benjamin Nieto Malbec</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;65,00</span>
+              </div>
+              <p class="item__meta">750 ml · Argentina</p>
+              <p class="item__desc">Cor vermelho granada intenso. Aromas de ameixa madura e frutas vermelhas em compota. Paladar elegante, equilibrado e com taninos macios.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Extravagante Tempranillo</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;62,00</span>
+              </div>
+              <p class="item__meta">750 ml</p>
+              <p class="item__desc">Cor púrpura intensa. Aromas de frutas vermelhas frescas e especiarias. Paladar equilibrado, com taninos suaves.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Casileiro Cabernet Sauvignon</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;72,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor rubi. Aromas de cereja e groselha preta e toque sutil de baunilha. Paladar com taninos médios e final longo.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Salentein Reserva Cabernet Sauvignon</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;75,00</span>
+              </div>
+              <p class="item__meta">750 ml · Argentina</p>
+              <p class="item__desc">Cor rubi profunda. Aromas de frutas negras maduras, especiarias e notas de tosta. Paladar encorpado, com taninos firmes e final elegante e persistente.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <span class="swatch swatch--rose" aria-hidden="true"></span>
+            <h3 class="category__title">Vinhos Rosés</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Reservado Concha y Toro Rosé</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;50,00</span>
+              </div>
+              <p class="item__meta">750 ml · Chile</p>
+              <p class="item__desc">Cor rosada com reflexos violáceos. Aromas de amora e ameixas frescas. Paladar com boa acidez e corpo expressivo.</p>
+            </li>
+          </ul>
+        </section>
+
+        <div class="partners">
+          <p class="eyebrow">
+            <span class="eyebrow__rule" aria-hidden="true"></span>
+            Parceiros
+            <span class="eyebrow__rule" aria-hidden="true"></span>
+          </p>
+          <div class="partners__logos">
+            <img src="logo-dinho.png" width="316" height="152" alt="Dinho Distribuidora" loading="lazy">
+            <span class="partners__divider" aria-hidden="true"></span>
+            <img class="partners__logo--concha" src="concha.png" width="430" height="287" alt="Concha y Toro" loading="lazy">
+            <span class="partners__divider" aria-hidden="true"></span>
+            <img src="salton.png" width="503" height="114" alt="Salton" loading="lazy">
+          </div>
+        </div>
       </div>
-      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    </section>
 
-  <!-- SEÇÃO VINHOS -->
-  <div class="menu-section active" id="vinhos">
-
-  <!-- PAGE 1 -->
-  <div class="page">
-    <div class="page-inner">
-      <header class="site-header">
-        <h1 class="main-title">Carta de Vinhos</h1>
-        <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
+    <!-- ============ SOPAS ============ -->
+    <section class="menu-section" id="sopas" role="tabpanel" aria-labelledby="tab-sopas">
+      <header class="section-head">
+        <p class="eyebrow">
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+          Le Zuppe
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+        </p>
+        <h2 class="section-title">Sabores <em>Especiais</em></h2>
+        <p class="section-lead">Porção de 450 ml · Para levar ou consumir no local</p>
       </header>
 
-      <section class="wine-section">
-        <h2 class="section-title">Vinhos Brancos</h2>
+      <div class="menu-card">
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <h3 class="category__title">Sopas Tradicionais</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Abóbora</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Cremosa e adocicada com temperos naturais e toque de noz-moscada.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Aipim com Calabresa</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Aipim cozido com calabresa defumada, cebola e cheiro-verde fresco.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Caldo Verde</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Clássico português com batata, couve fatiada, linguiça e azeite de oliva.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Canja</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Canja de galinha com arroz, cenoura e temperos caseiros. Leve e nutritiva.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Eslava</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Carne, batata, repolho e creme azedo. Sabor intenso e bem temperado.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Húngara</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Carne bovina com páprica defumada, pimentão e batata. Encorpada e aromática.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Creme de Legumes</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Legumes frescos da estação com ervas finas e creme de leite. Suave e delicado.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Toscana</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;27,00</span>
+              </div>
+              <p class="item__desc">Linguiça toscana, feijão cannellini, espinafre e alho. Rústica e saborosa.</p>
+            </li>
+          </ul>
+        </section>
 
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Granja do Vale Moscato Giallo 750ml – Brasil</span>
-            <span class="wine-price">R$35,00</span>
-          </div>
-          <p class="wine-desc">Cor amarelo claro. Aromas tropicais e florais. Paladar suave, doce e refrescante.</p>
-        </div>
+        <section class="category" data-reveal>
+          <header class="category__head">
+            <h3 class="category__title">Sopas Especiais</h3>
+          </header>
+          <ul class="items">
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Aspargos</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;30,00</span>
+              </div>
+              <p class="item__desc">Creme refinado de aspargos frescos com manteiga e toque de limão-siciliano.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Palmito</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;30,00</span>
+              </div>
+              <p class="item__desc">Creme aveludado de palmito pupunha com cebola caramelizada e ervas frescas.</p>
+            </li>
+            <li class="item">
+              <div class="item__line">
+                <span class="item__name">Cebola</span>
+                <span class="item__dots" aria-hidden="true"></span>
+                <span class="item__price">R$&nbsp;30,00</span>
+              </div>
+              <p class="item__desc">Sopa francesa de cebola caramelizada ao vinho branco, finalizada com croutons e queijo gratinado.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
 
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Reservado Chardonnay 750ml – Chile</span>
-            <span class="wine-price">R$50,00</span>
-          </div>
-          <p class="wine-desc">Cor amarelo brilhante. Aromas de maçã, pera e pêssego com leve toque mineral. Paladar equilibrado, com acidez agradável e final mineral.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Reservado Sauv. Blanc / P. Jiménez 750ml – Chile</span>
-            <span class="wine-price">R$50,00</span>
-          </div>
-          <p class="wine-desc">Cor amarelo com reflexos esverdeados. Aromas cítricos. Paladar fresco, leve e equilibrado.</p>
-        </div>
-      </section>
-
-      <section class="wine-section">
-        <h2 class="section-title">Espumantes</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Da Granja Moscatel 750ml – Brasil</span>
-            <span class="wine-price">R$45,00</span>
-          </div>
-          <p class="wine-desc">Aromas florais e frutados. Paladar leve, doce e equilibrado, com final refrescante.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">San Martin Moscatel 750ml – Brasil</span>
-            <span class="wine-price">R$45,00</span>
-          </div>
-          <p class="wine-desc">Aromas intensos de uvas frescas e flores brancas. Paladar adocicado, leve e agradável.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Salton Poética Demi-Sec 750ml – Brasil</span>
-            <span class="wine-price">R$54,00</span>
-          </div>
-          <p class="wine-desc">Cor amarelo palha com reflexos esverdeados. Aromas de frutas de polpa com notas cítricas. Paladar cremoso, suave e refrescante.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Lambrusco Del la Emília Branco 750ml – Itália</span>
-            <span class="wine-price">R$72,00</span>
-          </div>
-          <p class="wine-desc">Cor amarelo claro. Aromas frutados delicados. Paladar leve, levemente doce e refrescante.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Lambrusco Del la Emília Tinto 750ml – Itália</span>
-            <span class="wine-price">R$72,00</span>
-          </div>
-          <p class="wine-desc">Cor vermelho rubi. Aromas de frutas silvestres com toques florais. Paladar adocicado, equilibrado por uma acidez agradável.</p>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!-- PAGE 2 -->
-  <div class="page">
-    <div class="page-inner">
-      <section class="wine-section">
-        <h2 class="section-title">Vinhos Tintos</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Granja do Vale Tannat 750ml – Brasil</span>
-            <span class="wine-price">R$36,00</span>
-          </div>
-          <p class="wine-desc">Cor rubi escura. Aromas de frutas negras maduras. Paladar encorpado, com taninos presentes e final persistente.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Cabernet Reservado C. y Toro 750ml – Chile</span>
-            <span class="wine-price">R$50,00</span>
-          </div>
-          <p class="wine-desc">Cor rubi com reflexos violáceos. Aromas de frutas vermelhas frescas. Paladar macio, com taninos suaves.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Carménère Reservado C. y Toro 750ml – Chile</span>
-            <span class="wine-price">R$50,00</span>
-          </div>
-          <p class="wine-desc">Cor rubi intensa. Aromas de frutas vermelhas maduras com notas de pimenta e tosta. Paladar com taninos suaves e boa persistência.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Benjamin Nieto Malbec 750ml – Argentina</span>
-            <span class="wine-price">R$65,00</span>
-          </div>
-          <p class="wine-desc">Cor vermelho granada intenso. Aromas de ameixa madura e frutas vermelhas em compota. Paladar elegante, equilibrado e com taninos macios.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Extravagante Tempranillo 750ml</span>
-            <span class="wine-price">R$62,00</span>
-          </div>
-          <p class="wine-desc">Cor púrpura intensa. Aromas de frutas vermelhas frescas e especiarias. Paladar equilibrado, com taninos suaves.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Casileiro Cabernet Sauvignon 750ml – Chile</span>
-            <span class="wine-price">R$72,00</span>
-          </div>
-          <p class="wine-desc">Cor rubi. Aromas de cereja e groselha preta e toque sutil de baunilha. Paladar com taninos médios e final longo.</p>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Salentein Reserva Cabernet Sauvignon 750ml – Argentina</span>
-            <span class="wine-price">R$75,00</span>
-          </div>
-          <p class="wine-desc">Cor rubi profunda. Aromas de frutas negras maduras, especiarias e notas de tosta. Paladar encorpado, com taninos firmes e final elegante e persistente.</p>
-        </div>
-      </section>
-
-      <section class="wine-section roses">
-        <h2 class="section-title">Vinhos Rosés</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Reservado Concha y Toro Rosé 750ml – Chile</span>
-            <span class="wine-price">R$50,00</span>
-          </div>
-          <p class="wine-desc">Cor rosada com reflexos violáceos. Aromas de amora e ameixas frescas. Paladar com boa acidez e corpo expressivo.</p>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div class="footer-logos">
-          <img src="logo-dinho.png" alt="Dinho Distribuidora" class="footer-logo" />
-          <div class="footer-divider"></div>
-          <img src="concha.png" alt="Concha y Toro" class="footer-logo footer-logo--concha" />
-          <div class="footer-divider"></div>
-          <img src="salton.png" alt="Salton" class="footer-logo" />
-        </div>
-      </footer>
-    </div>
-  </div>
-
-  </div><!-- /menu-section vinhos -->
-
-  <!-- SEÇÃO SOPAS -->
-  <div class="menu-section" id="sopas">
-
-  <div class="page">
-    <div class="page-inner soup-page">
-      <header class="site-header">
-        <h1 class="main-title">Sabores Especiais</h1>
-        <p class="soup-subtitle">Porção de 450 ml &nbsp;·&nbsp; Para levar ou consumir no local</p>
+    <!-- ============ REFEIÇÕES ============ -->
+    <section class="menu-section" id="refeicoes" role="tabpanel" aria-labelledby="tab-refeicoes">
+      <header class="section-head">
+        <p class="eyebrow">
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+          Il Menu del Giorno
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+        </p>
+        <h2 class="section-title">Menu do <em>Dia</em></h2>
+        <p class="section-lead">O que preparamos no buffet para cada dia da semana.</p>
       </header>
 
-      <section class="wine-section">
-        <h2 class="section-title">Sopas Tradicionais – R$ 27,00</h2>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Abóbora</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Cremosa e adocicada com temperos naturais e toque de noz-moscada.</p>
+      <div class="days-nav">
+        <button class="days-arrow" type="button" data-step="-1" aria-label="Dia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
+        <div class="days" role="tablist" aria-label="Dia da semana">
+          <button class="day is-active" type="button" role="tab" id="dia-segunda" aria-selected="true" aria-controls="day-segunda" data-day="segunda">Segunda</button>
+          <button class="day" type="button" role="tab" id="dia-terca" aria-selected="false" aria-controls="day-terca" data-day="terca">Terça</button>
+          <button class="day" type="button" role="tab" id="dia-quarta" aria-selected="false" aria-controls="day-quarta" data-day="quarta">Quarta</button>
+          <button class="day" type="button" role="tab" id="dia-quinta" aria-selected="false" aria-controls="day-quinta" data-day="quinta">Quinta</button>
+          <button class="day" type="button" role="tab" id="dia-sexta" aria-selected="false" aria-controls="day-sexta" data-day="sexta">Sexta</button>
+          <button class="day" type="button" role="tab" id="dia-sabado" aria-selected="false" aria-controls="day-sabado" data-day="sabado">Sábado</button>
+          <button class="day" type="button" role="tab" id="dia-domingo" aria-selected="false" aria-controls="day-domingo" data-day="domingo">Domingo</button>
         </div>
+        <button class="days-arrow" type="button" data-step="1" aria-label="Próximo dia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
+      </div>
 
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Aipim com Calabresa</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Aipim cozido com calabresa defumada, cebola e cheiro-verde fresco.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Caldo Verde</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Clássico português com batata, couve fatiada, linguiça e azeite de oliva.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Canja</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Canja de galinha com arroz, cenoura e temperos caseiros. Leve e nutritiva.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Eslava</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Carne, batata, repolho e creme azedo. Sabor intenso e bem temperado.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Húngara</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Carne bovina com páprica defumada, pimentão e batata. Encorpada e aromática.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Creme de Legumes</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Legumes frescos da estação com ervas finas e creme de leite. Suave e delicado.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Toscana</span>
-            <span class="wine-price">R$ 27,00</span>
-          </div>
-          <p class="wine-desc">Linguiça toscana, feijão cannellini, espinafre e alho. Rústica e saborosa.</p>
-        </div>
-      </section>
-
-      <section class="wine-section">
-        <h2 class="section-title">Sopas Especiais – R$ 30,00</h2>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Aspargos</span>
-            <span class="wine-price">R$ 30,00</span>
-          </div>
-          <p class="wine-desc">Creme refinado de aspargos frescos com manteiga e toque de limão-siciliano.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Palmito</span>
-            <span class="wine-price">R$ 30,00</span>
-          </div>
-          <p class="wine-desc">Creme aveludado de palmito pupunha com cebola caramelizada e ervas frescas.</p>
-        </div>
-
-        <div class="wine-item soup-item">
-          <div class="wine-header">
-            <span class="wine-name">Cebola</span>
-            <span class="wine-price">R$ 30,00</span>
-          </div>
-          <p class="wine-desc">Sopa francesa de cebola caramelizada ao vinho branco, finalizada com croutons e queijo gratinado.</p>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div class="footer-logos">
-          <img src="logo-piemonte.png" alt="Piemonte" class="footer-logo" />
-        </div>
-      </footer>
-    </div>
-  </div>
-
-  </div><!-- /menu-section sopas -->
-
-  <!-- SEÇÃO REFEIÇÕES -->
-  <div class="menu-section" id="refeicoes">
-
-    <div class="day-selector">
-      <button class="day-btn active" data-day="segunda">Segunda</button>
-      <button class="day-btn" data-day="terca">Terça</button>
-      <button class="day-btn" data-day="quarta">Quarta</button>
-      <button class="day-btn" data-day="quinta">Quinta</button>
-      <button class="day-btn" data-day="sexta">Sexta</button>
-      <button class="day-btn" data-day="sabado">Sábado</button>
-      <button class="day-btn" data-day="domingo">Domingo</button>
-    </div>
-
-    <!-- SEGUNDA-FEIRA -->
-    <div class="page day-page active" id="day-segunda">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Segunda-feira</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Abobrinha Recheada</li>
-              <li>Porpeta (Almôndega)</li>
-              <li>Banana Frita</li>
-              <li>Frango ao Molho</li>
-              <li>Polenta Cremosa</li>
-              <li>Batata Frita</li>
-              <li>Arroz Integral</li>
-              <li>Polenta Frita</li>
-              <li>Moranga Caramelizada</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page is-active" id="day-segunda" role="tabpanel" aria-labelledby="dia-segunda">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Segunda-feira</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Abobrinha Recheada</li>
+                <li>Porpeta (Almôndega)</li>
+                <li>Banana Frita</li>
+                <li>Frango ao Molho</li>
+                <li>Polenta Cremosa</li>
+                <li>Batata Frita</li>
+                <li>Arroz Integral</li>
+                <li>Polenta Frita</li>
+                <li>Moranga Caramelizada</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -379,50 +439,53 @@
                 <li>Tilápia</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <!-- TERÇA-FEIRA -->
-    <div class="page day-page" id="day-terca">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Terça-feira</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Legumes Refogados</li>
-              <li>Bife à Parmegiana</li>
-              <li>Risoto (Funghi, Piemontês ou Palmito)</li>
-              <li>Carneiro Ensopado</li>
-              <li>Escondidinho de Carne</li>
-              <li>Moranga Caramelizada</li>
-              <li>Batata com Manteiga e Alecrim</li>
-              <li>Polenta Frita</li>
-              <li>Bolinho de Arroz</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-terca" role="tabpanel" aria-labelledby="dia-terca">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Terça-feira</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Legumes Refogados</li>
+                <li>Bife à Parmegiana</li>
+                <li>Risoto (Funghi, Piemontês ou Palmito)</li>
+                <li>Carneiro Ensopado</li>
+                <li>Escondidinho de Carne</li>
+                <li>Moranga Caramelizada</li>
+                <li>Batata com Manteiga e Alecrim</li>
+                <li>Polenta Frita</li>
+                <li>Bolinho de Arroz</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -435,51 +498,54 @@
                 <li>Filé Argentino</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <!-- QUARTA-FEIRA -->
-    <div class="page day-page" id="day-quarta">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Quarta-feira</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Repolho ou Legumes Refogados</li>
-              <li>Frango à Milanesa</li>
-              <li>Creme de Milho</li>
-              <li>Picadinho de Carne</li>
-              <li>Polenta Cremosa</li>
-              <li>Ovo Frito</li>
-              <li>Polenta Frita</li>
-              <li>Banana Frita</li>
-              <li>Aipim Frito</li>
-              <li>Moranga Caramelizada</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-quarta" role="tabpanel" aria-labelledby="dia-quarta">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Quarta-feira</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Repolho ou Legumes Refogados</li>
+                <li>Frango à Milanesa</li>
+                <li>Creme de Milho</li>
+                <li>Picadinho de Carne</li>
+                <li>Polenta Cremosa</li>
+                <li>Ovo Frito</li>
+                <li>Polenta Frita</li>
+                <li>Banana Frita</li>
+                <li>Aipim Frito</li>
+                <li>Moranga Caramelizada</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -491,51 +557,53 @@
                 <li>Tilápia</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
+      </article>
 
-      </div>
-    </div>
-
-    <!-- QUINTA-FEIRA -->
-    <div class="page day-page" id="day-quinta">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Quinta-feira</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Legumes Refogados</li>
-              <li>Batata Sauté</li>
-              <li>Frango Prensado</li>
-              <li>Posta ao Molho Demi Glace</li>
-              <li>Arroz Integral</li>
-              <li>Abobrinha à Milanesa</li>
-              <li>Moranga Caramelizada</li>
-              <li>Polenta Frita</li>
-              <li>Bolinho de Aipim</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-quinta" role="tabpanel" aria-labelledby="dia-quinta">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Quinta-feira</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Legumes Refogados</li>
+                <li>Batata Sauté</li>
+                <li>Frango Prensado</li>
+                <li>Posta ao Molho Demi Glace</li>
+                <li>Arroz Integral</li>
+                <li>Abobrinha à Milanesa</li>
+                <li>Moranga Caramelizada</li>
+                <li>Polenta Frita</li>
+                <li>Bolinho de Aipim</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -548,53 +616,55 @@
                 <li>Filé Argentino</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
+      </article>
 
-      </div>
-    </div>
-
-    <!-- SEXTA-FEIRA -->
-    <div class="page day-page" id="day-sexta">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Sexta-feira</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Legumes Refogados</li>
-              <li>Feijoada</li>
-              <li>Feijão Tropeiro</li>
-              <li>Couve Refogada</li>
-              <li>Banana Frita</li>
-              <li>Moranga Caramelizada</li>
-              <li>Omelete</li>
-              <li>Arroz Integral</li>
-              <li>Polenta Frita</li>
-              <li>Aipim Frito</li>
-              <li>Torresmo</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-sexta" role="tabpanel" aria-labelledby="dia-sexta">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Sexta-feira</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Legumes Refogados</li>
+                <li>Feijoada</li>
+                <li>Feijão Tropeiro</li>
+                <li>Couve Refogada</li>
+                <li>Banana Frita</li>
+                <li>Moranga Caramelizada</li>
+                <li>Omelete</li>
+                <li>Arroz Integral</li>
+                <li>Polenta Frita</li>
+                <li>Aipim Frito</li>
+                <li>Torresmo</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -606,51 +676,53 @@
                 <li>Tilápia</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
+      </article>
 
-      </div>
-    </div>
-
-    <!-- SÁBADO -->
-    <div class="page day-page" id="day-sabado">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Sábado</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Molho de Camarão</li>
-              <li>Escondidinho de Costela</li>
-              <li>Batata Frita</li>
-              <li>Coração de Frango</li>
-              <li>Batata Sauté</li>
-              <li>Strogonoff de Carne</li>
-              <li>Risoto (Funghi, Piemontês ou Palmito)</li>
-              <li>Polenta Frita</li>
-              <li>Moranga Caramelizada</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-sabado" role="tabpanel" aria-labelledby="dia-sabado">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Sábado</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Molho de Camarão</li>
+                <li>Escondidinho de Costela</li>
+                <li>Batata Frita</li>
+                <li>Coração de Frango</li>
+                <li>Batata Sauté</li>
+                <li>Strogonoff de Carne</li>
+                <li>Risoto (Funghi, Piemontês ou Palmito)</li>
+                <li>Polenta Frita</li>
+                <li>Moranga Caramelizada</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -665,50 +737,52 @@
                 <li>Xixo de Carneiro / Carré de Carneiro</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
+      </article>
 
-      </div>
-    </div>
-
-    <!-- DOMINGO -->
-    <div class="page day-page" id="day-domingo">
-      <div class="page-inner meal-page">
-        <header class="site-header meal-header">
-          <h1 class="main-title">Piemonte Menu</h1>
-          <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
-          <span class="day-badge">Domingo</span>
-        </header>
-
-        <div class="meal-columns">
-          <section class="wine-section meal-col">
-            <h2 class="section-title meal-title">Pratos do Dia:</h2>
-            <ul class="meal-list">
-              <li>Arroz</li>
-              <li>Feijão</li>
-              <li>Risoto</li>
-              <li>Frango Frito</li>
-              <li>Peixe à Milanesa</li>
-              <li>Molho de Camarão</li>
-              <li>Coração de Frango</li>
-              <li>Posta ao Molho Demi Glace</li>
-              <li>Risoto (Funghi, Piemontês ou Palmito)</li>
-              <li>Batata Frita</li>
-              <li>Purê de Batata</li>
-              <li>Polenta Frita</li>
-              <li>Moranga Caramelizada</li>
-            </ul>
-          </section>
-
-          <div class="meal-col">
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Massas:</h2>
-              <p class="meal-note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
+      <article class="day-page" id="day-domingo" role="tabpanel" aria-labelledby="dia-domingo">
+        <div class="menu-card">
+          <header class="day-head">
+            <h3 class="day-title">Domingo</h3>
+          </header>
+          <div class="day-grid">
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Pratos do Dia</h4>
+              </header>
+              <ul class="dish-list">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Risoto</li>
+                <li>Frango Frito</li>
+                <li>Peixe à Milanesa</li>
+                <li>Molho de Camarão</li>
+                <li>Coração de Frango</li>
+                <li>Posta ao Molho Demi Glace</li>
+                <li>Risoto (Funghi, Piemontês ou Palmito)</li>
+                <li>Batata Frita</li>
+                <li>Purê de Batata</li>
+                <li>Polenta Frita</li>
+                <li>Moranga Caramelizada</li>
+              </ul>
+            </section>
+            </div>
+            <div class="day-col">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Massas</h4>
+              </header>
+              <p class="note">Confira as opções de massas disponíveis hoje em nosso buffet.</p>
             </section>
 
-            <section class="wine-section">
-              <h2 class="section-title meal-title">Carnes:</h2>
-              <ul class="meal-list">
+            <section class="category">
+              <header class="category__head">
+                <h4 class="category__title">Carnes</h4>
+              </header>
+              <ul class="dish-list">
                 <li>Linguiça</li>
                 <li>Peru com Bacon</li>
                 <li>Alcatra com Bacon</li>
@@ -723,173 +797,197 @@
                 <li>Xixo de Carneiro / Carré de Carneiro</li>
               </ul>
             </section>
+            </div>
           </div>
         </div>
+      </article>
+    </section>
 
-      </div>
-    </div>
-
-  </div><!-- /menu-section refeicoes -->
-
-  <!-- SEÇÃO BEBIDAS -->
-  <div class="menu-section" id="bebidas">
-
-  <div class="page">
-    <div class="page-inner">
-      <header class="site-header">
-        <h1 class="main-title">Bebidas</h1>
-        <img src="logo-piemonte.png" alt="Piemonte" class="logo-piemonte" />
+    <!-- ============ BEBIDAS ============ -->
+    <section class="menu-section" id="bebidas" role="tabpanel" aria-labelledby="tab-bebidas">
+      <header class="section-head">
+        <p class="eyebrow">
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+          Le Bevande
+          <span class="eyebrow__rule" aria-hidden="true"></span>
+        </p>
+        <h2 class="section-title">Bebidas &amp; <em>Drinks</em></h2>
       </header>
 
-      <!-- Não Alcoólicas -->
-      <section class="wine-section">
-        <h2 class="section-title">Não Alcoólicas</h2>
+      <div class="menu-card">
+        <div class="drinks-grid">
+          <section class="category" data-reveal>
+            <header class="category__head">
+              <h3 class="category__title">Não Alcoólicas</h3>
+            </header>
+            <ul class="items items--compact">
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Água</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;6,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Refrigerante</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;8,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Refrigerante 220ml</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;5,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Cini 600ml</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;12,00</span>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Água</span>
-            <span class="wine-price">R$ 6,00</span>
-          </div>
+          <section class="category" data-reveal>
+            <header class="category__head">
+              <h3 class="category__title">Sucos</h3>
+            </header>
+            <ul class="items items--compact">
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco Copo</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;8,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco Copo Laranja</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;10,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco ½ Jarra</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;16,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco ½ Jarra Laranja</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;20,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco Jarra</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;25,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Suco Jarra Laranja</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;40,00</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="category" data-reveal>
+            <header class="category__head">
+              <h3 class="category__title">Vinhos</h3>
+            </header>
+            <ul class="items items--compact">
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Vinho Taça</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;12,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Vinho Jarra 350ml</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;16,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Vinho Jarra 750ml</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;24,00</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="category" data-reveal>
+            <header class="category__head">
+              <h3 class="category__title">Cervejas</h3>
+            </header>
+            <ul class="items items--compact">
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Cerveja Long Neck</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;13,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Cerveja 600ml</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;20,00</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Cerveja 600ml Heineken</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;22,00</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="category" data-reveal>
+            <header class="category__head">
+              <h3 class="category__title">Drinks</h3>
+            </header>
+            <ul class="items items--compact">
+              <li class="item">
+                <div class="item__line">
+                  <span class="item__name">Caipira</span>
+                  <span class="item__dots" aria-hidden="true"></span>
+                  <span class="item__price">R$&nbsp;20,00</span>
+                </div>
+                <p class="item__desc">Vodka, Cachaça, Bacardi ou Steinhager</p>
+              </li>
+            </ul>
+          </section>
         </div>
+      </div>
+    </section>
 
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Refrigerante</span>
-            <span class="wine-price">R$ 8,00</span>
-          </div>
-        </div>
+  </main>
 
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Refrigerante 220ml</span>
-            <span class="wine-price">R$ 5,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Cini 600ml</span>
-            <span class="wine-price">R$ 12,00</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sucos -->
-      <section class="wine-section">
-        <h2 class="section-title">Sucos</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco Copo</span>
-            <span class="wine-price">R$ 8,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco Copo Laranja</span>
-            <span class="wine-price">R$ 10,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco ½ Jarra</span>
-            <span class="wine-price">R$ 16,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco ½ Jarra Laranja</span>
-            <span class="wine-price">R$ 20,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco Jarra</span>
-            <span class="wine-price">R$ 25,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Suco Jarra Laranja</span>
-            <span class="wine-price">R$ 40,00</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Vinhos -->
-      <section class="wine-section">
-        <h2 class="section-title">Vinhos</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Vinho Taça</span>
-            <span class="wine-price">R$ 12,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Vinho Jarra 350ml</span>
-            <span class="wine-price">R$ 16,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Vinho Jarra 750ml</span>
-            <span class="wine-price">R$ 24,00</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Cervejas -->
-      <section class="wine-section">
-        <h2 class="section-title">Cervejas</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Cerveja Long Neck</span>
-            <span class="wine-price">R$ 13,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Cerveja 600ml</span>
-            <span class="wine-price">R$ 20,00</span>
-          </div>
-        </div>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Cerveja 600ml Heineken</span>
-            <span class="wine-price">R$ 22,00</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Drinks -->
-      <section class="wine-section">
-        <h2 class="section-title">Drinks</h2>
-
-        <div class="wine-item">
-          <div class="wine-header">
-            <span class="wine-name">Caipira</span>
-            <span class="wine-price">R$ 20,00</span>
-          </div>
-          <p class="wine-desc">Vodka, Cachaça, Bacardi ou Steinhager</p>
-        </div>
-      </section>
-
-    </div>
-  </div>
-
-  </div><!-- /menu-section bebidas -->
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="site-footer">
+    <img class="footer__logo" src="logo-piemonte.webp" width="301" height="240" alt="Restaurante Piemonte" loading="lazy">
+    <p class="footer__signoff">Grazie e buon appetito!</p>
+    <p class="footer__address">Av. Manoel Ribas, 6376 · Santa Felicidade · Curitiba</p>
+    <a class="footer__link" href="https://restaurantepiemonte.com.br" target="_blank" rel="noopener">restaurantepiemonte.com.br</a>
+  </footer>
 
   <script src="script.js"></script>
 </body>
